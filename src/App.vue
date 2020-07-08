@@ -1,31 +1,38 @@
 <template>
+
  <div>
    <app-header></app-header>
-   <app-ninjas></app-ninjas>
-   <app-footer></app-footer>
+   <router-view>
+<add-blog></add-blog>
+<show-blogs></show-blogs>
+<list-blogs></list-blogs>
+   </router-view>
+
  </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
-import Ninjas from './components/Ninjas.vue'
+import addBlog from './components/addBlog.vue';
+import showBlog from './components/showBlog.vue';
+import listBlogs from './components/listBlogs.vue';
+import header from './components/header.vue';
 
 export default {
-    components:{
-      'app-header':Header,
-      'app-footer':Footer,
-      'app-ninjas':Ninjas
-    },
-   data() {
-     return {
-        
-     }
+  components:{
+    'add-blog':addBlog,
+    'show-blogs':showBlog,
+    'list-blogs':listBlogs,
+    'app-header':header
+
+  },
+  data() {
+    return{
+  
+    }
   }
 }
+
 </script>
+<style scoped>
 
-<style>
-
-
-</style>
+ </style> 
